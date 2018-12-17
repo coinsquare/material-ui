@@ -10,16 +10,16 @@ import withStyles from '../styles/withStyles';
 import { isMuiElement } from '../utils/reactHelpers';
 
 // Workaround https://github.com/jsdom/jsdom/issues/2026
-const edgeFix =
-  typeof window !== 'undefined' && /jsdom/.test(window.navigator.userAgent)
-    ? {}
-    : {
-        // Fix a rendering issue on Edge
-        '@supports (-ms-ime-align: auto)': {
-          borderBottomLeftRadius: 0,
-          borderBottomRightRadius: 0,
-        },
-      };
+// const edgeFix =
+//   typeof window !== 'undefined' && /jsdom/.test(window.navigator.userAgent)
+//     ? {}
+//     : {
+//         // Fix a rendering issue on Edge
+//         '@supports (-ms-ime-align: auto)': {
+//           borderBottomLeftRadius: 0,
+//           borderBottomRightRadius: 0,
+//         },
+//       };
 
 export const styles = theme => {
   const transition = {
@@ -52,7 +52,7 @@ export const styles = theme => {
       '&:last-child': {
         borderBottomLeftRadius: 2,
         borderBottomRightRadius: 2,
-        ...edgeFix,
+        // ...edgeFix,
       },
       '&$expanded + &': {
         '&:before': {
